@@ -27,18 +27,25 @@ const getNoteIndex = async (id) => {
 const paramsValidator = (data, action) => {
     const keys = Object.keys(data);
     let isValid = false;
+    const { title = "", body = "" } = data;
     if (["update", "delete", "search"].some((e) => e.includes(action))) {
         if (!keys.includes("id"))
             return { isValid, message: "Missing ID" };
+        if ((!keys.includes("body") && !keys.includes("title")) ||
+            (keys.includes("body") &&
+                keys.includes("title") &&
+                !title.length &&
+                !body.length))
+            return { isValid, message: "No Body or Title Provided" };
     }
     if (action === "create") {
         if (!["title"].every((e) => keys.includes(e)))
             return { isValid, message: "Missing Title" };
-        if (!data.title || (data.title && !data.title.trim().length))
+        if (!data.title || (title && !title.trim().length))
             return { isValid, message: "Empty Title" };
-        if (data.title && data.title.length > MAX_TITLE_LENGTH)
+        if (data.title && title.length > MAX_TITLE_LENGTH)
             return { isValid, message: "Title Character Count Exceeded" };
-        if (data.body && data.body.length > MAX_BODY_LENGTH)
+        if (data.body && body.length > MAX_BODY_LENGTH)
             return { isValid, message: "Body Character Count Exceeded" };
     }
     return { isValid: true };
