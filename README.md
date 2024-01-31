@@ -1,16 +1,35 @@
 # To run this project, Ensure the ff:
 1. tsc is installed on the host system
     type in "tsc --version" to check if the package is present.
+    * tsc
+        ```sh
+        tsc --version
+        ```
 2. NodeJs is installed on the host system
     Type in "node -v" in the terminal to check if node is present
+    * node
+        ```sh
+        node -v
+        ```
     Additionally, Ensure Node version is 15 or above.
     Node version 21.6.1 was used to develop this Project
+3. NPM
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 
-# When cloning, do the ff:
+### Prerequisites
 1. Ensure Node version is 15 or above
 2. RUN "npm i" to install dependencies
+  ```sh
+  npm i
+  ```
 3. RUN "npm run start" to run the API and start listening on port 3000
+  ```sh
+  npm run start
+  ```
 
 
 # All data is stored in the "db.json" file located at the root of the project
@@ -24,11 +43,24 @@ interface iNote{
 
 
 # Doing REST api requests:
-Base URL is: http://localhost:3000
 All requests to notes should be sent to this base URL: http://localhost:3000/notes
+
 
 1. Creation
     in the BODY section of the request only "title" is required
+
+sample request:
+```sh
+URL: http://localhost:3000/notes/
+```
+ 
+```sh
+JSON BODY:
+{
+	"title": "Hello world!",
+	"body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+}
+```
 
 2. Updating/Deleting
     -in the params, the "id" is required
