@@ -53,18 +53,26 @@ sample request:
 ```sh
 URL: http://localhost:3000/notes/
 ```
- 
+ JSON BODY:
 ```sh
-JSON BODY:
 {
 	"title": "Hello world!",
 	"body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
 }
 ```
 
-2. Updating/Deleting
-    -in the params, the "id" is required
-    -in the BODY section of the request only "title" is required
+2. Updating
+    -in the params, only the "id" is required
 
+```sh
+URL: http://localhost:3000/notes/[insert-id-here]
+```
+
+3. Deleting
+    -Only the ID in params is necessary
+
+```sh
+URL: http://localhost:3000/notes/[insert-id-here]
+```
 
 
