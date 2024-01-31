@@ -24,6 +24,7 @@ interface iNote{
 
 
 # Doing REST api requests:
+Base URL is: http://localhost:3000
 1. Creation
     in the BODY section of the request only "title" is required
 
