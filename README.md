@@ -1,11 +1,11 @@
-# To run this project, Ensure the ff:
-1. tsc is installed on the host system
+# Getting started
+1. Ensure tsc is installed on the host system
     type in "tsc --version" to check if the package is present.
     * tsc
         ```sh
         tsc --version
         ```
-2. NodeJs is installed on the host system
+2. Ensure  NodeJs is installed on the host system
     Type in "node -v" in the terminal to check if node is present
     * node
         ```sh
@@ -13,7 +13,7 @@
         ```
     Additionally, Ensure Node version is 15 or above.
     Node version 21.6.1 was used to develop this Project
-3. NPM
+3. Ensure NPM is installed on the host system
 * npm
   ```sh
   npm install npm@latest -g
@@ -32,7 +32,7 @@
   ```
 
 
-# All data is stored in the "db.json" file located at the root of the project
+
 
 # Note data structure is as follows:
 interface iNote{
@@ -74,5 +74,12 @@ URL: http://localhost:3000/notes/[insert-id-here]
 ```sh
 URL: http://localhost:3000/notes/[insert-id-here]
 ```
+
+
+
+# Notes
+1. All data is stored in the "db.json" file located at the root of the project
+2. lowdb was used to manage the data in this project
+
 
 
