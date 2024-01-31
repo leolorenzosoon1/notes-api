@@ -81,11 +81,11 @@ URL: http://localhost:3000/notes/[insert-id-here]
 1. All data is stored in the "db.json" file located at the root of the project
 2. lowdb was used to manage the data in this project
 3. Project requirement is as follows:
-POST /notes: Create a new note.
-GET /notes: Retrieve all notes.
-GET /notes/:id: Retrieve a specific note by ID.
-PUT /notes/:id: Update a specific note.
-DELETE /notes/:id: Delete a specific note.
+* POST /notes: Create a new note.
+* GET /notes: Retrieve all notes.
+* GET /notes/:id: Retrieve a specific note by ID.
+* PUT /notes/:id: Update a specific note.
+* DELETE /notes/:id: Delete a specific note.
 
 
 
