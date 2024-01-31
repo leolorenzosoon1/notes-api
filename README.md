@@ -25,6 +25,8 @@ interface iNote{
 
 # Doing REST api requests:
 Base URL is: http://localhost:3000
+All requests to notes should be sent to this base URL: http://localhost:3000/notes
+
 1. Creation
     in the BODY section of the request only "title" is required
 
