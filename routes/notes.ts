@@ -53,7 +53,6 @@ router.put("/:id", async (req: Request, res: Response) => {
   const { params, body }: { params: ParamsDictionary; body: iNote } = req;
   const { id } = params;
   
-  console.log("%c Line:54 🍖 body", "color:#3f7cff", body);
   const {isValid, message} = paramsValidator({ ...body, id}, "update");
   if (!isValid)
     return res.status(400).send({ message, success: false });
